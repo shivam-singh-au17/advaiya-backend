@@ -1,0 +1,638 @@
+{
+	"info": {
+		"_postman_id": "122b3759-7af4-4d65-98fc-996b774e82b9",
+		"name": "advaiya-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25164413"
+	},
+	"item": [
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Kamal\",\r\n    \"last_name\": \"Singh\",\r\n    \"email\": \"ss5095771@gmail.com\",\r\n    \"phone\": \"8853289753\",\r\n    \"password\": \"Singh@12345\",\r\n    \"birthday\": \"1998-07-12\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"signup"
+							]
+						},
+						"description": "The `POST /users/signup` endpoint is used to create a new user account. The request should include the following parameters in the raw request body:\n\n- `first_name` (string): The first name of the user.\n    \n- `last_name` (string): The last name of the user.\n    \n- `email` (string): The email address of the user.\n    \n- `phone` (string): The phone number of the user.\n    \n- `password` (string): The password for the user's account.\n    \n- `birthday` (string): The birthday of the user.\n    \n\nThe response to this request will have a status code of 200 and a content type of `application/json`. The response body will contain the following structure:\n\n``` json\n{\n    \"status\": true,\n    \"data\": {\n        \"user\": {\n            \"created_at\": \"\",\n            \"last_modified\": \"\",\n            \"id\": 0,\n            \"first_name\": \"\",\n            \"last_name\": \"\",\n            \"email\": \"\",\n            \"phone\": \"\",\n            \"birthday\": \"\",\n            \"password\": \"\",\n            \"firebaseUid\": \"\",\n            \"salt\": \"\",\n            \"role\": [\"\"]\n        },\n        \"token\": \"\"\n    }\n}\n\n ```\n\nThe `status` field indicates the success of the operation, and the `data` field contains the user information along with a token for authentication."
+					},
+					"response": [
+						{
+							"name": "signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\": \"Kamal\",\r\n    \"last_name\": \"Singh\",\r\n    \"email\": \"ss5095771@gmail.com\",\r\n    \"phone\": \"8853289753\",\r\n    \"password\": \"Singh@12345\",\r\n    \"birthday\": \"1998-07-12\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users/signup",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "711"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2c7-5fH0yYEPDm4xOOc1zhXcmIYg834\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 21 Jun 2024 07:21:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": {\n        \"user\": {\n            \"created_at\": \"2024-06-21T07:21:28.039Z\",\n            \"last_modified\": \"2024-06-21T07:21:28.039Z\",\n            \"id\": 2,\n            \"first_name\": \"Kamal\",\n            \"last_name\": \"Singh\",\n            \"email\": \"ss5095771@gmail.com\",\n            \"phone\": \"8853289753\",\n            \"birthday\": \"1998-07-12\",\n            \"password\": \"$2a$10$3hB3tohr7PNCAHWszYDYWujQkFuqtNkgyKjSB6zdFgqRSF.t.oaYi\",\n            \"firebaseUid\": \"hYPSJQGw6dh618n9WNs3N5dS3oz1\",\n            \"salt\": \"$2a$10$3hB3tohr7PNCAHWszYDYWu\",\n            \"role\": [\n                \"USER\"\n            ]\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZmlyZWJhc2VVaWQiOiJoWVBTSlFHdzZkaDYxOG45V05zM041ZFMzb3oxIiwiZW1haWwiOiJzczUwOTU3NzFAZ21haWwuY29tIiwicGhvbmUiOiI4ODUzMjg5NzUzIiwicm9sZSI6WyJVU0VSIl0sImlhdCI6MTcxODk1NDQ4OCwiZXhwIjoxNzE4OTY4ODg4fQ.5yoltyNNTBE-BwIsY8OiI3v3mWlQtavv8MvgHC6wCrA\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"ss5095771@gmail.com\",\r\n    \"password\": \"Singh@12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						},
+						"description": "### POST /users/login\n\nThis endpoint is used to log in a user.\n\n#### Request Body\n\n- `email` (string, required): The email of the user.\n    \n- `password` (string, required): The password of the user.\n    \n\n#### Response\n\nThe response is a JSON object with the following schema:\n\n``` json\n{\n    \"type\": \"object\",\n    \"properties\": {\n        \"status\": {\n            \"type\": \"boolean\"\n        },\n        \"data\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"user\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"id\": {\n                            \"type\": \"integer\"\n                        },\n                        \"first_name\": {\n                            \"type\": \"string\"\n                        },\n                        \"last_name\": {\n                            \"type\": \"string\"\n                        },\n                        \"email\": {\n                            \"type\": \"string\"\n                        },\n                        \"firebaseUid\": {\n                            \"type\": \"string\"\n                        },\n                        \"phone\": {\n                            \"type\": \"string\"\n                        },\n                        \"password\": {\n                            \"type\": \"string\"\n                        },\n                        \"salt\": {\n                            \"type\": \"string\"\n                        },\n                        \"birthday\": {\n                            \"type\": \"string\"\n                        },\n                        \"created_at\": {\n                            \"type\": \"string\"\n                        },\n                        \"last_modified\": {\n                            \"type\": \"string\"\n                        },\n                        \"role\": {\n                            \"type\": \"array\",\n                            \"items\": {\n                                \"type\": \"string\"\n                            }\n                        }\n                    }\n                },\n                \"token\": {\n                    \"type\": \"string\"\n                }\n            }\n        }\n    }\n}\n\n ```"
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ss5095771@gmail.com\",\r\n    \"password\": \"Singh@12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "711"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2c7-JGc86WKxZxNqpFHtD2va/U/lEdQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 21 Jun 2024 07:22:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": {\n        \"user\": {\n            \"id\": 2,\n            \"first_name\": \"Kamal\",\n            \"last_name\": \"Singh\",\n            \"email\": \"ss5095771@gmail.com\",\n            \"firebaseUid\": \"hYPSJQGw6dh618n9WNs3N5dS3oz1\",\n            \"phone\": \"8853289753\",\n            \"password\": \"$2a$10$3hB3tohr7PNCAHWszYDYWujQkFuqtNkgyKjSB6zdFgqRSF.t.oaYi\",\n            \"salt\": \"$2a$10$3hB3tohr7PNCAHWszYDYWu\",\n            \"birthday\": \"1998-07-12\",\n            \"created_at\": \"2024-06-21T07:21:28.039Z\",\n            \"last_modified\": \"2024-06-21T07:21:28.039Z\",\n            \"role\": [\n                \"USER\"\n            ]\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZmlyZWJhc2VVaWQiOiJoWVBTSlFHdzZkaDYxOG45V05zM041ZFMzb3oxIiwiZW1haWwiOiJzczUwOTU3NzFAZ21haWwuY29tIiwicGhvbmUiOiI4ODUzMjg5NzUzIiwicm9sZSI6WyJVU0VSIl0sImlhdCI6MTcxODk1NDU2OCwiZXhwIjoxNzE4OTY4OTY4fQ.y8lsKQICth23k21Vsjf6Hb7lVrlGkXcCMd8BWf3HeiM\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ACCOUNT",
+			"item": [
+				{
+					"name": "accounts/:accountId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/accounts/:accountId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts",
+								":accountId"
+							],
+							"variable": [
+								{
+									"key": "accountId",
+									"value": "2"
+								}
+							]
+						},
+						"description": "### Retrieve Account Details\n\nThis endpoint retrieves the details of a specific account identified by the `accountId`.\n\n#### Request\n\n- Method: GET\n    \n- URL: `{{url}}/accounts/:accountId`\n    \n\n#### Response\n\nThe response is a JSON object with the following schema:\n\n``` json\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"status\": {\n      \"type\": \"boolean\"\n    },\n    \"data\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"id\": {\n          \"type\": \"integer\"\n        },\n        \"first_name\": {\n          \"type\": \"string\"\n        },\n        \"last_name\": {\n          \"type\": \"string\"\n        },\n        \"email\": {\n          \"type\": \"string\"\n        },\n        \"firebaseUid\": {\n          \"type\": \"string\"\n        },\n        \"phone\": {\n          \"type\": \"string\"\n        },\n        \"password\": {\n          \"type\": \"string\"\n        },\n        \"salt\": {\n          \"type\": \"string\"\n        },\n        \"birthday\": {\n          \"type\": \"string\"\n        },\n        \"created_at\": {\n          \"type\": \"string\"\n        },\n        \"last_modified\": {\n          \"type\": \"string\"\n        },\n        \"role\": {\n          \"type\": \"array\",\n          \"items\": {\n            \"type\": \"string\"\n          }\n        }\n      }\n    }\n  }\n}\n\n ```"
+					},
+					"response": [
+						{
+							"name": "accounts/:accountId",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/accounts/:accountId",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"accounts",
+										":accountId"
+									],
+									"variable": [
+										{
+											"key": "accountId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "404"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"194-kR5kcG9eejvWaVW4+CoglQ5y0iE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 21 Jun 2024 07:40:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": {\n        \"id\": 2,\n        \"first_name\": \"Kamal\",\n        \"last_name\": \"Gupta\",\n        \"email\": \"ss5095771@gmail.com\",\n        \"firebaseUid\": \"hYPSJQGw6dh618n9WNs3N5dS3oz1\",\n        \"phone\": \"8853289753\",\n        \"password\": \"$2a$10$3hB3tohr7PNCAHWszYDYWujQkFuqtNkgyKjSB6zdFgqRSF.t.oaYi\",\n        \"salt\": \"$2a$10$3hB3tohr7PNCAHWszYDYWu\",\n        \"birthday\": \"1998-07-12\",\n        \"created_at\": \"2024-06-21T07:21:28.039Z\",\n        \"last_modified\": \"2024-06-21T07:40:14.265Z\",\n        \"role\": [\n            \"USER\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "accounts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/accounts?page=1&limit=10&sortBy=created_at&sortOrder=DESC",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "created_at"
+								},
+								{
+									"key": "sortOrder",
+									"value": "DESC"
+								},
+								{
+									"key": "search",
+									"value": "Kamal",
+									"disabled": true
+								}
+							]
+						},
+						"description": "The endpoint retrieves a list of accounts with pagination and sorting parameters.\n\n### Response\n\nThe response is a JSON object with the following schema:\n\n``` json\n{\n    \"type\": \"object\",\n    \"properties\": {\n        \"status\": {\n            \"type\": \"boolean\"\n        },\n        \"data\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"data\": {\n                    \"type\": \"array\",\n                    \"items\": {\n                        \"type\": \"object\",\n                        \"properties\": {\n                            \"id\": {\n                                \"type\": \"number\"\n                            },\n                            \"first_name\": {\n                                \"type\": \"string\"\n                            },\n                            \"last_name\": {\n                                \"type\": \"string\"\n                            },\n                            \"email\": {\n                                \"type\": \"string\"\n                            },\n                            \"firebaseUid\": {\n                                \"type\": \"string\"\n                            },\n                            \"phone\": {\n                                \"type\": \"string\"\n                            },\n                            \"password\": {\n                                \"type\": \"string\"\n                            },\n                            \"salt\": {\n                                \"type\": \"string\"\n                            },\n                            \"birthday\": {\n                                \"type\": \"string\"\n                            },\n                            \"created_at\": {\n                                \"type\": \"string\"\n                            },\n                            \"last_modified\": {\n                                \"type\": \"string\"\n                            },\n                            \"role\": {\n                                \"type\": \"array\",\n                                \"items\": {\n                                    \"type\": \"string\"\n                                }\n                            }\n                        }\n                    }\n                },\n                \"count\": {\n                    \"type\": \"number\"\n                }\n            }\n        }\n    }\n}\n\n ```"
+					},
+					"response": [
+						{
+							"name": "accounts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/accounts?page=1&limit=10&sortBy=created_at&sortOrder=DESC",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"accounts"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "sortBy",
+											"value": "created_at"
+										},
+										{
+											"key": "sortOrder",
+											"value": "DESC"
+										},
+										{
+											"key": "search",
+											"value": "Kamal",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "434"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b2-P/FpxFUJclvpz6MnCzVqJ85OwvI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 21 Jun 2024 07:52:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": {\n        \"data\": [\n            {\n                \"id\": 1,\n                \"first_name\": \"Shivam\",\n                \"last_name\": \"Shivam\",\n                \"email\": \"shivamsingh4458@gmail.com\",\n                \"firebaseUid\": \"FN8c6lpNSudrQztEKQoUkeYz6B12\",\n                \"phone\": \"6306518466\",\n                \"password\": \"$2a$10$P53Pkbh4e.RKywzSi0DFT.zTguuz7dnkr/LwKnw6oeoI5zo98V5Sm\",\n                \"salt\": \"$2a$10$P53Pkbh4e.RKywzSi0DFT.\",\n                \"birthday\": \"1998-07-12\",\n                \"created_at\": \"2024-06-21T06:55:21.913Z\",\n                \"last_modified\": \"2024-06-21T06:55:21.913Z\",\n                \"role\": [\n                    \"ADMIN\"\n                ]\n            }\n        ],\n        \"count\": 2\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "accounts/:accountId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/accounts/:accountId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts",
+								":accountId"
+							],
+							"variable": [
+								{
+									"key": "accountId",
+									"value": "2"
+								}
+							]
+						},
+						"description": "### Delete Account\n\nThis endpoint is used to delete a specific account.\n\n#### Request\n\n- Method: DELETE\n    \n- URL: `{{url}}/accounts/:accountId`\n    \n\n#### Response\n\nThe response is in JSON format and has the following schema:\n\n``` json\n{\n    \"type\": \"object\",\n    \"properties\": {\n        \"status\": {\n            \"type\": \"boolean\"\n        },\n        \"data\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"message\": {\n                    \"type\": \"string\"\n                }\n            }\n        }\n    }\n}\n\n ```\n\nThe response body contains a boolean status indicating the success of the operation, along with an optional message in the data field."
+					},
+					"response": [
+						{
+							"name": "accounts/:accountId",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/accounts/:accountId",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"accounts",
+										":accountId"
+									],
+									"variable": [
+										{
+											"key": "accountId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-h64O8zjJy0J7irWjC0Ns4ZvxPyM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 21 Jun 2024 07:43:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": {\n        \"message\": \"Account deleted successfully\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "accounts/:accountId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Kamal\",\r\n    \"last_name\": \"Gupta\",\r\n    \"phone\": \"8853289753\",\r\n    \"birthday\": \"1998-07-12\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/accounts/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts",
+								""
+							]
+						},
+						"description": "### Update Account Details\n\nThis endpoint allows the client to update account details by sending a PUT request to the specified URL.\n\n#### Request Body\n\n- `first_name` (string, optional): The first name of the account holder.\n    \n- `last_name` (string, optional): The last name of the account holder.\n    \n- `phone` (string, optional): The phone number of the account holder.\n    \n- `birthday` (string, optional): The birthday of the account holder.\n    \n\n#### Response\n\nUpon a successful request, the server responds with a status code of 200 and a JSON object containing the updated account details.\n\n- `status` (boolean): Indicates the status of the operation.\n    \n- `data` (object): Contains the updated account information including the ID, first name, last name, email, phone, password, salt, birthday, creation timestamp, last modification timestamp, and role."
+					},
+					"response": [
+						{
+							"name": "accounts/:accountId",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\": \"Kamal\",\r\n    \"last_name\": \"Gupta\",\r\n    \"phone\": \"8853289753\",\r\n    \"birthday\": \"1998-07-12\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/accounts/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"accounts",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "404"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"194-kR5kcG9eejvWaVW4+CoglQ5y0iE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 21 Jun 2024 07:40:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": {\n        \"id\": 2,\n        \"first_name\": \"Kamal\",\n        \"last_name\": \"Gupta\",\n        \"email\": \"ss5095771@gmail.com\",\n        \"firebaseUid\": \"hYPSJQGw6dh618n9WNs3N5dS3oz1\",\n        \"phone\": \"8853289753\",\n        \"password\": \"$2a$10$3hB3tohr7PNCAHWszYDYWujQkFuqtNkgyKjSB6zdFgqRSF.t.oaYi\",\n        \"salt\": \"$2a$10$3hB3tohr7PNCAHWszYDYWu\",\n        \"birthday\": \"1998-07-12\",\n        \"created_at\": \"2024-06-21T07:21:28.039Z\",\n        \"last_modified\": \"2024-06-21T07:40:14.265Z\",\n        \"role\": [\n            \"USER\"\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
