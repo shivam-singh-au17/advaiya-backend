@@ -5,3 +5,5 @@ dist
 .env
 
 logs
+
+firebase-admin-key.json.json
